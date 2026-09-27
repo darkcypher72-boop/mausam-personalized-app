@@ -14,7 +14,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 const INTERESTS_STORAGE_KEY = "@mausam_user_interests";
 const USER_ID_KEY = "@mausam_user_id";
 
-const API_BASE_URL = "http://192.168.29.129:5000";
+const API_BASE_URL = "https://mausam-backend-zp0f.onrender.com";
 
 const interests = [
   {

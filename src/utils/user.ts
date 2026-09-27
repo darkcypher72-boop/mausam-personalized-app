@@ -4,7 +4,7 @@ import * as Crypto from "expo-crypto";
 const DEVICE_ID_KEY = "@mausam_device_id";
 const USER_ID_KEY = "@mausam_user_id";
 
-const API_BASE_URL = "http://192.168.29.129:5000";
+const API_BASE_URL = "https://mausam-backend-zp0f.onrender.com";
 
 export async function getOrCreateDeviceId(): Promise<string> {
   const existingId = await AsyncStorage.getItem(DEVICE_ID_KEY);

@@ -23,7 +23,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Location from "expo-location";
 import { useLanguage } from "../hooks/useLanguage";
-const API_BASE_URL = "http://192.168.29.129:5000";
+const API_BASE_URL = "https://mausam-backend-zp0f.onrender.com";
 const USER_ID_KEY = "@mausam_user_id";
 const LOCATION_STORAGE_KEY = "@mausam_user_location";
 const INTERESTS_STORAGE_KEY = "@mausam_user_interests";
