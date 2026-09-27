@@ -1,18 +1,60 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useColorScheme } from 'react-native';
+import { Stack } from "expo-router";
+import { LanguageProvider } from "../hooks/useLanguage";
+import UserBootstrap from "../components/UserBootstrap";
 
-import { AnimatedSplashOverlay } from '@/components/animated-icon';
-import AppTabs from '@/components/app-tabs';
+const MAUSAM_NAVY = "#071D2B";
 
-SplashScreen.preventAutoHideAsync();
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
+export default function RootLayout() {
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <AnimatedSplashOverlay />
-      <AppTabs />
-    </ThemeProvider>
+    <LanguageProvider>
+      <UserBootstrap />
+
+      <Stack
+  screenOptions={{
+    headerShown: false,
+    contentStyle: {
+      backgroundColor: "#071D2B",
+    },
+    animation: "fade",
+    animationDuration: 120,
+    gestureEnabled: false,
+  }}
+>
+        <Stack.Screen
+          name="index"
+          options={{
+            animation: "fade",
+          }}
+        />
+
+        <Stack.Screen
+          name="onboarding"
+          options={{
+            animation: "fade",
+          }}
+        />
+
+        <Stack.Screen
+          name="location"
+          options={{
+            animation: "fade",
+          }}
+        />
+
+        <Stack.Screen
+          name="home"
+          options={{
+            animation: "fade",
+          }}
+        />
+
+        <Stack.Screen
+          name="profile"
+          options={{
+            animation: "fade",
+          }}
+        />
+      </Stack>
+    </LanguageProvider>
   );
-}
+}1
